@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Marker } from '@agm/core/services/google-maps-types';
 import { MarkerConf } from '../../class/markerConf.class';
 
@@ -25,7 +25,7 @@ export class MapsComponent implements OnInit {
   lat = 51.678418;
   lng = 7.809007;
   constructor() {
-    if( localStorage.getItem('marcadores')){
+    if( localStorage.getItem('marcadores')) {
       this.markers = JSON.parse(localStorage.getItem('marcadores'));
     }
     // const newMarker = new MarkerConf(51.678418, 7.809007);
@@ -33,9 +33,8 @@ export class MapsComponent implements OnInit {
    }
 
   ngOnInit() {
-  
   }
-  agregarMarker(event){
+  agregarMarker(event) {
     const coords: {lat: number, lng: number} = event.coords;
 
     const newMarker = new MarkerConf(coords.lat, coords.lng);
@@ -51,15 +50,15 @@ export class MapsComponent implements OnInit {
     localStorage.setItem('marcadores',JSON.stringify( this.markers));
   }
 
-  deleteMarker(index: number){
+  deleteMarker(index: number) {
 
-    this.markers.splice(index,1);
+    this.markers.splice(index, 1);
     this.infoAction(deleteMarker);
-    this.guardarStorage(); 
+    this.guardarStorage();
 
   }
 
-  infoAction(value){
+  infoAction(value) {
     this.alert = value;
   }
   close(alert: Alert) {

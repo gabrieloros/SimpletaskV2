@@ -8,15 +8,23 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PanelControlComponent } from './components/panel-control/panel-control.component';
+import { FormCreateClaimComponent } from './components/shared/form-create-claim/form-create-claim.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PanelButtonsComponent } from './components/panel-control/panel-buttons/panel-buttons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapsComponent
+    MapsComponent,
+    PanelControlComponent,
+    FormCreateClaimComponent,
+    PanelButtonsComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),

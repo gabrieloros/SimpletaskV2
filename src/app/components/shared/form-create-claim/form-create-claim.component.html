@@ -1,0 +1,33 @@
+<form [formGroup]="createClaim" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Motivo</label>
+        <input formControlName="motivo" placeholder="Typeahead inside a form" class="form-control">
+        <!-- [typeahead]="states"
+      [typeaheadOptionsLimit]="7"
+      [typeaheadMinLength]="0" -->
+    </div>
+
+    <div class="form-group">
+        <label>Solicitante</label>
+        <input type="text" class="form-control" formControlName="solicitante">
+    </div>
+
+    <div class="form-group">
+        <label>Telefono</label>
+        <input type="text" class="form-control" formControlName="telefono">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="latLng">
+    </div>
+
+    <div class="form-group">
+        <label>Detalle</label>
+        <input type="text" class="form-control" formControlName="detalle">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </div>
+
+</form>
