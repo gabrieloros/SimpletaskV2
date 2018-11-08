@@ -6,7 +6,7 @@ export class MarkerConf {
     public title = "Sin titulo";
     public desc = "Sin Descripción";
 
-    constructor (lat: number, lng:number){
+    constructor (lat: number, lng: number) {
         this.lat = lat;
         this.lng = lng;
     }

@@ -9,14 +9,14 @@ import { PanelControlComponent } from '../panel-control.component';
 export class PanelButtonsComponent implements OnInit {
 
   @ViewChild(PanelControlComponent) panelControl: PanelControlComponent;
-
+  valueON = true;
   constructor() { }
 
   ngOnInit() {
   }
 
   createNewsClaims() {
-    this.panelControl.createClaim = true;
+        this.panelControl.createClaims(this.valueON) ;
   }
 
 }
